@@ -53,6 +53,7 @@ variable "ec2-instance-type-map" {
 
 }
 
+/*
 variable "db_username" {
   description = "AWS RDS Database admin username"
   type        = string
@@ -64,3 +65,4 @@ variable "db_password" {
   type        = string
   sensitive   = true
 }
+*/

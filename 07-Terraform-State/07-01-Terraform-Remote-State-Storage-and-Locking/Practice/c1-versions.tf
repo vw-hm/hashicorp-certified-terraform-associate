@@ -7,6 +7,14 @@ terraform {
       version = "~> 3.0"
     }
   }
+
+  backend "s3" {
+    bucket         = "testbucketofmayur"
+    key            = "terraform/dev/terraform.tfstate"
+    region         = "eu-west-1"
+    dynamodb_table = "terraform-dev-state-table"
+  }
+
 }
 
 # Provider Block
@@ -18,3 +26,4 @@ provider "aws" {
 Note-1:  AWS Credentials Profile (profile = "default") configured on your local desktop terminal  
 $HOME/.aws/credentials
 */
+
